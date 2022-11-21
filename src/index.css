@@ -95,18 +95,18 @@ footer {
   margin-bottom: 10px;
 }
 
+input,
+textarea {
+  border: 3px solid black;
+  padding: 5px;
+}
+
 .popup h2,
 .popup p,
 .popup h3,
 .popup h4,
 .popup input {
   margin-bottom: 10px;
-}
-
-input,
-textarea {
-  border: 3px solid black;
-  padding: 5px;
 }
 
 .popComment {
