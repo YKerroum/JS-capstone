@@ -19,7 +19,7 @@ const displayMovie = (movie) => {
 
 const fetchMovie = () => {
   const promises = [];
-  for (let i = 1; i < 7; i++) {
+  for (let i = 1; i < 7; i += 1) {
     const api = `https://api.tvmaze.com/shows/${i}`;
     promises.push(fetch(api).then((res) => res.json()));
   }
@@ -28,11 +28,10 @@ const fetchMovie = () => {
     const movie = results.map((data) => ({
       name: data.name,
       id: data.id,
-      image: data.image.medium
-    }))
+      image: data.image.medium,
+    }));
     displayMovie(movie);
-  })
-
+  });
 };
 
 export { fetchMovie, displayMovie };
