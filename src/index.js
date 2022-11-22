@@ -4,7 +4,7 @@ import displayPopUp from './modules/popup.js';
 /* eslint-disable  no-unused-vars */
 import { heart } from './images/heart.png';
 import { xbutton } from './images/xbutton.png';
-import getLikes from './modules/likes.js';
+
 
 const list = document.getElementById('movies');
 const movies = [];
@@ -28,5 +28,3 @@ list.addEventListener('click', (e) => {
     list.firstElementChild.remove();
   }
 });
-
-getLikes(0);

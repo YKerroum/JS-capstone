@@ -1,3 +1,5 @@
+import getLikes from './likes.js';
+
 const displayMovie = (movie) => {
   const list = document.getElementById('movies');
   const newMovie = movie.map((movieId) => `
@@ -7,7 +9,7 @@ const displayMovie = (movie) => {
           <p>${movieId.name}</p>
           <div class="likes">
             <img id="${movieId.id}A" class="heart" src="ced5220738fcbc8b88e8.png" alt="" />
-            <p class="text">5 Likes</p>
+            <p class="text">${getLikes(parseInt(movieId.id, 10))}Likes</p>
           </div>
         </div>
         <button id="item${movieId.id}" class="comment">Comments</button>
