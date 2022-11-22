@@ -21,10 +21,9 @@ const displayMovie = (movie) => {
   parag.forEach((paragraph) => {
     const like = ' Likes';
     getData('likes').then((result) => { paragraph.textContent = (result[paragraph.id - 1].likes) + like; });
-    //  console.log(getLikes(parseInt(paragraph.id.charAt(0), 10)));
   });
 };
-// ${getLikes((movieId.id - 1))}
+
 const fetchMovie = async () => {
   const promises = [];
   for (let i = 1; i < 7; i += 1) {
