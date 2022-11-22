@@ -19,10 +19,8 @@ fetchMovie().then((results) => {
 });
 
 list.addEventListener('click', (e) => {
-
   if (e.target.classList.contains('comment')) {
     const movieId = parseInt(e.target.id.slice(-1), 10);
-    console.log(movies);
     displayPopUp(movies.find((m) => m.id === movieId));
   }
   if (e.target.classList.contains('heart')) {
