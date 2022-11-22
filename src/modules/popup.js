@@ -6,7 +6,7 @@ const displayPopUp = (movieId) => {
 <div class="popup">
   <div>
     <img class="poster2" src="${image}" alt="" />
-    <img class="heart xbutton" src="b17907ef6e75236830e9.png" alt="" />
+    <img class="xbutton" src="b17907ef6e75236830e9.png" alt="" />
   </div>
   <h2>${movieId.name}</h2>
   <p>${movieId.genres}</p>

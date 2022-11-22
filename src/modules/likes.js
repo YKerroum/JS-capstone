@@ -4,10 +4,27 @@ const getData = async (action) => {
   const data = await response.json();
 
   return data;
+
 };
 
-const getLikes = (id) => {
-  getData('likes').then((result) => console.log(result[id].likes));
-}
+const postData = async (id) => {
+  const settings = {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: `item${id}`,
+    }),
+  };
+  try {
+    const fetchResponse = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fMjDgeXVKzKMyQltWGlL/likes', settings);
+    const data = await fetchResponse.json();
+    return data;
+  } catch (e) {
+    return e;
+  }
+};
 
-export default getLikes;
+export { getData, postData };
