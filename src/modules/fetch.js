@@ -17,21 +17,15 @@ const displayMovie = (movie) => {
   list.innerHTML = newMovie;
 };
 
-const fetchMovie = () => {
+const fetchMovie = async () => {
   const promises = [];
   for (let i = 1; i < 7; i += 1) {
     const api = `https://api.tvmaze.com/shows/${i}`;
-    promises.push(fetch(api).then((res) => res.json()));
+    // eslint-disable-next-line no-await-in-loop
+    const data = await fetch(api).then((res) => res.json());
+    promises.push(data);
   }
-
-  Promise.all(promises).then((results) => {
-    const movie = results.map((data) => ({
-      name: data.name,
-      id: data.id,
-      image: data.image.medium,
-    }));
-    displayMovie(movie);
-  });
+  return promises;
 };
 
 export { fetchMovie, displayMovie };
