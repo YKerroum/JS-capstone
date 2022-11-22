@@ -1,7 +1,7 @@
 const list = document.getElementById('movies');
 const displayPopUp = (movieId) => {
-  const image = movieId.image;
-  
+  const { image } = movieId;
+
   const popUp = `
 <div class="popup">
   <div>
@@ -14,13 +14,8 @@ const displayPopUp = (movieId) => {
   
 </div>
   `;
-  
+
   list.innerHTML = popUp + list.innerHTML;
-}
-const closePopUp = () => {
-  const popup = document.querySelector('.popup');
-  popup.parentElement.removeChild(popup);
-}
+};
 
-
-export {displayPopUp, closePopUp};
+export default displayPopUp;

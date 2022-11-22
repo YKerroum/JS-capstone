@@ -21,11 +21,11 @@ const fetchMovie = async () => {
   const promises = [];
   for (let i = 1; i < 7; i += 1) {
     const api = `https://api.tvmaze.com/shows/${i}`;
-    
-    const data=await fetch(api).then((res) => res.json());
+    // eslint-disable-next-line no-await-in-loop
+    const data = await fetch(api).then((res) => res.json());
     promises.push(data);
   }
   return promises;
-}
+};
 
 export { fetchMovie, displayMovie };
