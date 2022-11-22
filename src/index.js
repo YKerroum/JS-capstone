@@ -14,16 +14,16 @@ fetchMovie().then((results) => {
     image: data.image.medium,
     genres: data.genres,
   }));
-  movies.push(movie);
+  movies.push(...movie);
   displayMovie(movie);
 });
 
 list.addEventListener('click', (e) => {
-//   e.preventDefault();
+
   if (e.target.classList.contains('comment')) {
     const movieId = parseInt(e.target.id.slice(-1), 10);
-
-    displayPopUp(movies[0].find((m) => m.id === movieId));
+    console.log(movies);
+    displayPopUp(movies.find((m) => m.id === movieId));
   }
   if (e.target.classList.contains('heart')) {
     list.firstElementChild.remove();
