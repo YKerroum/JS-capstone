@@ -4,7 +4,6 @@ const getData = async (action) => {
   const data = await response.json();
 
   return data;
-
 };
 
 const postData = async (id) => {
