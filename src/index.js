@@ -21,7 +21,7 @@ fetchMovie().then((results) => {
 list.addEventListener('click', (e) => {
 //   e.preventDefault();
   if (e.target.classList.contains('comment')) {
-    const movieId = e.target.id.slice(-1);
+    const movieId = parseInt(e.target.id.slice(-1),10);
 
     displayPopUp(movies[0].find((m) => m.id === movieId));
   }

@@ -1,6 +1,6 @@
 const list = document.getElementById('movies');
 const displayPopUp = (movieId) => {
-  const { image } = movieId;
+  const image = movieId.image;
 
   const popUp = `
 <div class="popup">

@@ -1,3 +1,4 @@
+
 const displayMovie = (movie) => {
   const list = document.getElementById('movies');
   const newMovie = movie.map((movieId) => `
