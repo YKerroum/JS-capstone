@@ -53,7 +53,8 @@ body {
   align-items: center;
 }
 
-.heart {
+.heart,
+.xbutton {
   width: 30px;
   cursor: pointer;
 }
