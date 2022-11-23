@@ -1,4 +1,4 @@
-import { getData } from './likes.js';
+import { likesCounter } from './likesCounter.js';
 
 const displayMovie = (movie) => {
   const list = document.getElementById('movies');
@@ -17,11 +17,7 @@ const displayMovie = (movie) => {
       </div>
   `).join('');
   list.innerHTML = newMovie;
-  const parag = document.querySelectorAll('.text');
-  parag.forEach((paragraph) => {
-    const like = ' Likes';
-    getData('likes').then((result) => { paragraph.textContent = (result[paragraph.id - 1].likes) + like; });
-  });
+  likesCounter();
 };
 
 const fetchMovie = async () => {

@@ -6,6 +6,7 @@ import { heart } from './images/heart.png';
 import { xbutton } from './images/xbutton.png';
 import { postData, postComments } from './modules/likes.js';
 import itemCounter from './modules/items.js';
+import { likesCounter, updateLike } from './modules/likesCounter.js';
 
 const list = document.getElementById('movies');
 const movies = [];
@@ -35,7 +36,7 @@ list.addEventListener('click', (e) => {
   }
   if (e.target.classList.contains('heart')) {
     postData(e.target.id.charAt(0));
-    displayMovie(movies);
+    updateLike(e.target.id.charAt(0));
   }
 });
 
