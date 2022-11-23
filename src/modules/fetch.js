@@ -1,4 +1,4 @@
-import { likesCounter, updateLike } from './likesCounter.js';
+import { likesCounter } from './likesCounter.js';
 
 const displayMovie = (movie) => {
   const list = document.getElementById('movies');

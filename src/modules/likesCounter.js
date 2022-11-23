@@ -2,9 +2,11 @@ import { getData } from './likes.js';
 
 const likesCounter = () => {
   const parag = document.querySelectorAll('.text');
-  parag.forEach((paragraph) => {
+  getData('likes').then((result) => {
     const like = ' Likes';
-    getData('likes').then((result) => { paragraph.textContent = (result[paragraph.id - 1].likes) + like; });
+    parag.forEach((paragraph) => {
+      paragraph.textContent = (result[paragraph.id - 1].likes) + like;
+    });
   });
 };
 
