@@ -29,11 +29,6 @@ list.addEventListener('click', (e) => {
   if (e.target.classList.contains('comment')) {
     const movieId = parseInt(e.target.id.slice(-1), 10);
     displayPopUp(movies.find((m) => m.id === movieId));
-    // const popupComments= document.getElementById('popComment');
-    // const popupHead = document.getElementById('commentCounter');
-    // if(popupComments.childElementCount===0) {
-    // popupHead.innerHTML = 'Comments(0)';
-    // };
   }
   if (e.target.classList.contains('xbutton')) {
     list.firstElementChild.remove();
