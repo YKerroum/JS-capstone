@@ -35,6 +35,10 @@ const displayPopUp = (movieId) => {
   
 </div>
   `;
+      const oldPopup = document.querySelector('.popup');
+      if (oldPopup) {
+        oldPopup.remove();
+      }
       list.innerHTML = popUp + list.innerHTML;
     });
 };

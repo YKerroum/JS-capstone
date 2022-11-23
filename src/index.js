@@ -43,9 +43,10 @@ list.addEventListener('submit', (e) => {
   e.preventDefault();
   const formId = parseInt(e.target.classList[0].charAt(4), 10);
   const formData = new FormData(e.target);
-  postComments(formId, formData.get('user'), formData.get('comment')).then(() => {
-    formData.set('user', '');
-    formData.set('comment', '');
-    displayPopUp(movies.find((m) => m.id === formId));
-  });
+  postComments(formId, formData.get('user'), formData.get('comment'))
+    .then(() => {
+      formData.set('user', '');
+      formData.set('comment', '');
+      displayPopUp(movies.find((m) => m.id === formId));
+    });
 });
