@@ -1,3 +1,4 @@
+import commentCounter from './commentsCounter.js';
 import { getData } from './likes.js';
 
 const list = document.getElementById('movies');
@@ -24,7 +25,7 @@ const displayPopUp = (movieId) => {
   </div>
   <h2>${movieId.name}</h2>
   <p>${movieId.genres}</p>
-  <h3 id="commentCounter">Comments(${comments.length})</h3>
+  <h3 id="commentCounter"></h3>
   <div id="popComment">${popComments}</div>
   <h4>Add a comment</h4>
   <form id="addForm" class="form${movieId.id}">
@@ -35,11 +36,14 @@ const displayPopUp = (movieId) => {
   
 </div>
   `;
+  
+
       const oldPopup = document.querySelector('.popup');
       if (oldPopup) {
         oldPopup.remove();
       }
       list.innerHTML = popUp + list.innerHTML;
+      commentCounter();
     });
 };
 
