@@ -26,9 +26,19 @@ const displayPopUp = (movieId) => {
   <p>${movieId.genres}</p>
   <h3 id="commentCounter">Comments(${comments.length})</h3>
   <div id="popComment">${popComments}</div>
+  <h4>Add a comment</h4>
+  <form id="addForm" class="form${movieId.id}">
+  <input id="name" name="user" type="text" placeholder="Your name">
+  <textarea id="content" name="comment" cols="30" rows="10" placeholder="Your insights"></textarea>
+  <input type="submit" value="Comment" id="reservation" class="submit">
+  </form>
   
 </div>
   `;
+      const oldPopup = document.querySelector('.popup');
+      if (oldPopup) {
+        oldPopup.remove();
+      }
       list.innerHTML = popUp + list.innerHTML;
     });
 };
