@@ -3,22 +3,20 @@ import { getData } from './likes.js';
 const list = document.getElementById('movies');
 const displayPopUp = (movieId) => {
   const { image } = movieId;
-  const comments=[];
-  let popComments='';
-  let popUp='';
-  getData(`comments?item_id=item${movieId.id}`).then((result) => { comments.push(...result);
-  comments.forEach((comment) => {
-  popComments += `<p>${comment.creation_date} ${comment.username} ${comment.comment}</p>`;
-  });
-  
-  
-   })
-   .catch(()=> {
-   
-  
-   })
-   .finally(() => {
-   popUp += `
+  const comments = [];
+  let popComments = '';
+  let popUp = '';
+  getData(`comments?item_id=item${movieId.id}`).then((result) => {
+    comments.push(...result);
+    comments.forEach((comment) => {
+      popComments += `<p>${comment.creation_date} ${comment.username} ${comment.comment}</p>`;
+    });
+  })
+    .catch(() => {
+
+    })
+    .finally(() => {
+      popUp += `
 <div class="popup">
   <div>
     <img class="poster2" src="${image}" alt="" />
@@ -31,9 +29,8 @@ const displayPopUp = (movieId) => {
   
 </div>
   `;
-  list.innerHTML = popUp + list.innerHTML;
-   });
-  
+      list.innerHTML = popUp + list.innerHTML;
+    });
 };
 
 export default displayPopUp;
