@@ -36,7 +36,6 @@ const displayPopUp = (movieId) => {
   
 </div>
   `;
-  
 
       const oldPopup = document.querySelector('.popup');
       if (oldPopup) {
