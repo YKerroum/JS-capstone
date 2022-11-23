@@ -59,7 +59,8 @@ body {
   cursor: pointer;
 }
 
-button,#reservation {
+button,
+#reservation {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   box-shadow: 3px 3px black;
@@ -96,8 +97,8 @@ footer {
 }
 
 .poster2 {
-height:150px;
-margin-top:0;
+  height: 150px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -115,8 +116,8 @@ textarea {
   margin-bottom: 10px;
 }
 
-.popup p{
-font-size: 13px;
+.popup p {
+  font-size: 13px;
 }
 
 .popComment {
@@ -126,10 +127,8 @@ font-size: 13px;
 }
 
 #addForm {
-display: flex;
-flex-direction: column;
-gap: 10;
-justify-content: space-around;
-align-items: flex-start;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
