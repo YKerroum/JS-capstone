@@ -26,6 +26,12 @@ const displayPopUp = (movieId) => {
   <p>${movieId.genres}</p>
   <h3 id="commentCounter">Comments(${comments.length})</h3>
   <div id="popComment">${popComments}</div>
+  <h4>Add a comment</h4>
+  <form id="addForm">
+  <input id="name" type="text" placeholder="Your name">
+  <textarea id="content" cols="30" rows="10" placeholder="Your insights"></textarea>
+  <input type="submit" value="Comment" id="reservation">
+  </form>
   
 </div>
   `;
