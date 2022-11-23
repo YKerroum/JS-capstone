@@ -4,7 +4,7 @@ import displayPopUp from './modules/popup.js';
 /* eslint-disable  no-unused-vars */
 import { heart } from './images/heart.png';
 import { xbutton } from './images/xbutton.png';
-import { postData } from './modules/likes.js';
+import { postData,  postComments } from './modules/likes.js';
 import itemCounter from './modules/items.js';
 
 const list = document.getElementById('movies');
@@ -38,3 +38,15 @@ list.addEventListener('click', (e) => {
     displayMovie(movies);
   }
 });
+
+list.addEventListener('submit',(e) => {
+e.preventDefault();
+const formId =parseInt(e.target.classList[0].charAt(4), 10);
+const formData= new FormData(e.target);
+postComments(formId, formData.get('user'), formData.get('comment')).then(() => {
+formData.set('user','');
+formData.set('comment','');
+displayPopUp(movies.find((m) => m.id === formId));
+});
+
+})

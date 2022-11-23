@@ -115,8 +115,11 @@ textarea {
   margin-bottom: 10px;
 }
 
+.popup p{
+font-size: 13px;
+}
+
 .popComment {
-  font-size: 12px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
