@@ -3,8 +3,8 @@
 
 # JavaScript Capstone Project
 
-> In this project, we are setting up a Movies website with basic functionality using JavaScript modules, Webpack and APIs.
-> ​
+> In this project, we are setting up a Movies website with basic functionalities using JavaScript modules, Webpack and APIs.
+> This website has two versions (desktop and mobile) and allows users to check the number of movies and interact by giving a like to their favorite movies and checking for other users' comments, as well as adding their own.
 
 ## Built With
 
@@ -12,11 +12,13 @@
 - Webpack.
 - Visual Studio Code.
 - APIs
+- Jest
+- ES6
   ​
 
 ## Demo
 
-You can find the live version here:
+You can find the live version here: [Demo](https://ykerroum.github.io/JS-capstone/dist/)
 
 ## Getting Started
 
@@ -54,8 +56,8 @@ To get a local copy up and running follow these simple steps.
 👤 **Author2**
 ​
 
-- GitHub: []()
-- LinkedIn: []()
+- GitHub: [@YKerroum](https://github.com/YKerroum)
+- LinkedIn: [Youssef KERROUM](https://www.linkedin.com/in/ykerroum/)
 
 Contributions, issues, and feature requests are welcome!
 
