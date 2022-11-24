@@ -9,6 +9,7 @@ const displayPopUp = (movieId) => {
   let popUp = '';
   getData(`comments?item_id=item${movieId.id}`).then((result) => {
     comments.push(...result);
+    comments.reverse();
     comments.forEach((comment) => {
       popComments += `<p>${comment.creation_date} ${comment.username} ${comment.comment}</p>`;
     });

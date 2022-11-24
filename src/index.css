@@ -241,6 +241,26 @@ textarea {
   font-weight: 700;
 }
 
+#content {
+  height: 5em;
+}
+
+#popComment {
+  height: 100px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#popComment::-webkit-scrollbar {
+  display: none;
+}
+
+#popComment p {
+  margin: 0;
+  padding: 0;
+}
+
 @media only screen and (min-width: 500px) {
   #movies {
     display: grid;
@@ -252,6 +272,19 @@ textarea {
 @media only screen and (min-width: 768px) {
   .nav-bar-top {
     display: block;
+  }
+
+  #popComment {
+    height: 180px;
+  }
+
+  #popComment p {
+    margin: 5px;
+    padding: 0;
+  }
+
+  #content {
+    height: 10em;
   }
 
   .menu-button {
