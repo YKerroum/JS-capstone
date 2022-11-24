@@ -20,11 +20,14 @@ const displayPopUp = (movieId) => {
       popUp += `
 <div class="popup">
   <div>
+  <div>
     <img class="poster2" src="${image}" alt="" />
     <img class="xbutton" src="b17907ef6e75236830e9.png" alt="" />
   </div>
   <h2>${movieId.name}</h2>
   <p>${movieId.genres}</p>
+  </div>
+  <div>
   <h3 id="commentCounter"></h3>
   <div id="popComment">${popComments}</div>
   <h4>Add a comment</h4>
@@ -33,6 +36,7 @@ const displayPopUp = (movieId) => {
   <textarea id="content" name="comment" cols="30" rows="10" placeholder="Your insights"></textarea>
   <input type="submit" value="Comment" id="reservation" class="submit">
   </form>
+  </div>
   
 </div>
   `;

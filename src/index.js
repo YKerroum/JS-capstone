@@ -8,6 +8,8 @@ import { postData, postComments } from './modules/likes.js';
 import itemCounter from './modules/items.js';
 import { likesCounter, updateLike } from './modules/likesCounter.js';
 
+const menu = document.querySelector('.menu-button');
+const popUp = document.querySelector('.pop');
 const list = document.getElementById('movies');
 const movies = [];
 const data = () => {
@@ -51,3 +53,19 @@ list.addEventListener('submit', (e) => {
       displayPopUp(movies.find((m) => m.id === formId));
     });
 });
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  popUp.classList.toggle('active');
+  if (document.body.style.overflowY !== 'hidden') {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'scroll';
+  }
+});
+
+document.querySelectorAll('.menu-links').forEach((i) => i.addEventListener('click', () => {
+  menu.classList.remove('active');
+  popUp.classList.remove('active');
+  document.body.style.overflowY = 'scroll';
+}));
