@@ -44,6 +44,13 @@ alt="logo" width="140"  height="auto" />
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
+  <summary>Team Work</summary>
+  <ul>
+    <li><a href="https://github.com/YKerroum/JS-capstone/projects/1">JKanban Board</a></li>
+  </ul>
+</details>
+
+<details>
   <summary>Building</summary>
   <ul>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
