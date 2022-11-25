@@ -1,5 +1,5 @@
 const getData = async (action) => {
-  const interaction = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fMjDgeXVKzKMyQltWGlL/${action}`;
+  const interaction = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/${action}`;
   const response = await fetch(interaction);
   const data = await response.json();
 
@@ -18,7 +18,7 @@ const postData = async (id) => {
     }),
   };
   try {
-    const fetchResponse = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fMjDgeXVKzKMyQltWGlL/likes', settings);
+    const fetchResponse = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/likes`, settings);
     const data = await fetchResponse.json();
     return data;
   } catch (e) {
@@ -41,7 +41,7 @@ const postComments = async (id, user, comment) => {
   };
 
   try {
-    const fetchResponse = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fMjDgeXVKzKMyQltWGlL/comments', settings);
+    const fetchResponse = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}/comments`, settings);
     const data = await fetchResponse.json();
     return data;
   } catch (e) {
