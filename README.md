@@ -108,6 +108,12 @@ alt="logo" width="140"  height="auto" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## REVIEWS
+<!-- REVIEWS -->
+
+
+For this project we performed several code reviews. You can find one of them performed by Sebastian here: https://github.com/YKerroum/JS-capstone/pull/27
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
