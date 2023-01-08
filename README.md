@@ -104,7 +104,7 @@ alt="logo" width="140"  height="auto" />
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://ykerroum.github.io/JS-capstone/dist/)
+- [Live Demo Link](https://ykerroum.github.io/New-movies/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
